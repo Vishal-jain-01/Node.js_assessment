@@ -11,6 +11,18 @@ Complete implementation of the user management system with 4 APIs optimized for 
 
 ## Setup Instructions
 
+### Frontend (React UI)
+
+The repository now includes a React UI in the `frontend` directory for a high-level CRM preview.
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Vite will start at http://localhost:4173
+
 ### 1. Install MongoDB
 
 **Windows:**
