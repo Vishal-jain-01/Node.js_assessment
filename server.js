@@ -2,6 +2,7 @@ import dotenv from "dotenv"
 import express from "express";
 import connectDB from "./config/database.js";
 import userRoutes from "./routes/users.js";
+import crmRoutes from "./routes/crm/index.js";
 
 
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 app.use('/api', userRoutes);
+app.use('/api/crm', crmRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'User Service API is running' });
