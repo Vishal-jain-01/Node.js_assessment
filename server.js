@@ -2,6 +2,7 @@ import dotenv from "dotenv"
 import express from "express";
 import connectDB from "./config/database.js";
 import userRoutes from "./routes/users.js";
+import attendanceRoutes from "./routes/attendance.js";
 import whatsappRoutes from "./routes/whatsapp.js";
 import { validateWhatsAppConfig } from "./utils/whatsapp.js";
 
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 app.use('/api', userRoutes);
+app.use('/api', attendanceRoutes);
 app.use('/api', whatsappRoutes);
 
 app.get('/', (req, res) => {
